@@ -1,6 +1,4 @@
 <?php
-define("ED", chr(10));
-define("EK", chr(9));
 
 function myfseek(&$fl, $npos) // некоторые символы могут быть 2 байта, как смвол 0Ah, поэтому стандартная функция не сработает. тк размеры ключей(и данных) не одинаковы, ускорить процесс не выйдет
 {
@@ -14,6 +12,9 @@ function myfseek(&$fl, $npos) // некоторые символы могут б
 
 function bsearch($fname, $skey)
 {
+    define("ED", chr(10));
+    define("EK", chr(9));
+    
     if ($fname != null && $skey != null)
     {
         $ffs = fopen($fname, "rt");
