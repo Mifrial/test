@@ -1,0 +1,69 @@
+body
+{
+    background-color: #ddedf8;
+    margin: 0px;
+}
+
+.CLine
+{
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #88cfff;
+    min-height: 40px;
+    line-height: 40px;
+    width: 100%;
+    display: inline-block;
+}
+
+.CLine.CL2
+{
+    background-color: #ddedf8;
+}
+
+.CBlock
+{
+    display: inline-block;
+    height: 100%;
+    line-height: 40px;
+    width: calc((100% - 20px) / 3);
+    min-width: 265px;
+    border-right: 1px solid black;
+}
+
+.CBlock.CB2
+{
+    text-align: center;
+}
+
+.CEdit
+{
+    background-color: #ddedf8;
+    vertical-align: middle;
+    font-size: 24px;
+    height: 30px;
+    width: calc(100% - 50px);
+    text-align: center;
+    border-radius: 10px;
+    border-width: 0px;
+}
+
+#IBtn
+{
+    font-size: 24px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: rgb(182, 221, 170);
+    height: 30px;
+    line-height: 30px;
+    width: calc(100% - 20px);
+    left: 8px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <script src="./index.js"></script>
+
+    <div class="CLine">
+        <div class="CBlock">
+            Дата:
+            <input id="IEdit1" type="date" class="CEdit">
+        </div>
+        <div class="CBlock">
+            Дата:
+            <input id="IEdit2" type="date" class="CEdit">
+        </div>
+        <div class="CBlock">
+            <div id="IBtn" onclick="Cl();"> Подсчитать </div>
+        </div>
+    </div>
+    <div class="CLine CL2">
+        <div id="IL21" class="CBlock CB2"></div>
+        <div id="IL22" class="CBlock CB2"></div>
+        <div id="IL23" class="CBlock CB2"></div>
+    </div>
+
+    <script>
+        function DateToInpDate(dat)
+        {
+            let mo = dat.getMonth();
+            let da = dat.getDate()
+
+            if (mo < 10) mo = '0' + mo;
+            if (da < 10) mo = '0' + mo;
+
+            return dat.getFullYear()+'-'+mo+'-'+da;
+        }
+
+        var d = new Date();
+        document.getElementById('IEdit2').value = DateToInpDate(d);
+        d.setDate(d.getDate()-1);
+        document.getElementById('IEdit1').value = DateToInpDate(d);
+
+        Cl();
+    </script>
+</body>
+</html>
